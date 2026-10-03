@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Outer ring -->
+  <circle cx="50" cy="50" r="46" stroke="#d4af37" stroke-width="2"/>
+  <circle cx="50" cy="50" r="42" stroke="#d4af37" stroke-width="0.8" stroke-dasharray="2 2" opacity="0.6"/>
+  
+  <!-- Degree Ticks -->
+  <line x1="50" y1="4" x2="50" y2="10" stroke="#d4af37" stroke-width="2"/>
+  <line x1="50" y1="90" x2="50" y2="96" stroke="#d4af37" stroke-width="2"/>
+  <line x1="4" y1="50" x2="10" y2="50" stroke="#d4af37" stroke-width="2"/>
+  <line x1="90" y1="50" x2="96" y2="50" stroke="#d4af37" stroke-width="2"/>
+  
+  <!-- 4 Point Compass Star -->
+  <!-- North (Red Arrow) -->
+  <polygon points="50,12 45,50 50,45" fill="#ef4444"/>
+  <polygon points="50,12 55,50 50,45" fill="#b91c1c"/>
+  
+  <!-- South (Gold/Dark) -->
+  <polygon points="50,88 45,50 50,55" fill="#d4af37"/>
+  <polygon points="50,88 55,50 50,55" fill="#996515"/>
+
+  <!-- East -->
+  <polygon points="88,50 50,45 55,50" fill="#d4af37"/>
+  <polygon points="88,50 50,55 55,50" fill="#996515"/>
+
+  <!-- West -->
+  <polygon points="12,50 50,45 45,50" fill="#d4af37"/>
+  <polygon points="12,50 50,55 45,50" fill="#996515"/>
+
+  <!-- Center Pin -->
+  <circle cx="50" cy="50" r="5" fill="#18120c" stroke="#d4af37" stroke-width="2"/>
+  <circle cx="50" cy="50" r="2" fill="#d4af37"/>
+</svg>

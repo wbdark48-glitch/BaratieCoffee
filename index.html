@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baratie Coffee — Grand Line Brews | Кофейня в стиле One Piece</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  
+  <!-- Google Fonts: Cinzel Decorative, Cinzel & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient Glow Sphere for Dynamic Lighting (Korsa Maximize Style) -->
+  <div class="ambient-glow-sphere" id="hero-ambient-glow"></div>
+
+  <!-- ==========================================================================
+       TOP NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="nav-container">
+      <a href="#hero" class="brand-group">
+        <div class="brand-logo-wrap">
+          <img src="assets/logo.svg" alt="Baratie Coffee Logo">
+        </div>
+        <div class="brand-title-wrap">
+          <span class="brand-name">BARATIE</span>
+          <span class="brand-sub">Grand Line Brews</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Главная</a></li>
+          <li><a href="#menu" class="nav-link">Меню Wanted</a></li>
+          <li><a href="#customizer" class="nav-link">Лаборатория Напитка</a></li>
+          <li><a href="#story" class="nav-link">Камбуз Санджи</a></li>
+          <li><a href="#location" class="nav-link">Лог-Пос & Карта</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Ambient Sound Generator Toggle -->
+        <button class="btn-audio-toggle" id="btn-audio" title="Атмосфера океана и звон белли">
+          <div class="audio-waves">
+            <span class="audio-wave-bar"></span>
+            <span class="audio-wave-bar"></span>
+            <span class="audio-wave-bar"></span>
+          </div>
+          <span id="audio-btn-text">Шум Моря</span>
+        </button>
+
+        <!-- Cart Drawer Button -->
+        <button class="btn-cart-nav" id="btn-open-cart">
+          <i data-lucide="shopping-bag" style="width: 18px; height: 18px;"></i>
+          <span>Трюм</span>
+          <span class="cart-count-badge" id="cart-counter">0</span>
+        </button>
+
+        <!-- Mobile Toggle -->
+        <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Меню">
+          <i data-lucide="menu" style="width: 24px; height: 24px;"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION (High-End 3D Stage & Expressive Typography)
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-grid">
+      <!-- Left Editorial Column -->
+      <div class="hero-left">
+        <div class="hero-supertag">
+          <span class="hero-supertag-dot"></span>
+          <span>GRAND LINE ROASTERY • EST. 1997</span>
+        </div>
+
+        <h1 class="hero-title">
+          BARATIE
+          <span class="title-accent">COFFEE</span>
+          <span class="title-kanji">海上のレストラン「バラティエ」</span>
+        </h1>
+
+        <p class="hero-description">
+          Первая плавучая спешелти-кофейня на стыке всех четырёх морей. Напитки с силой Дьявольских плодов, бодрящие бленды Мугивар и легендарная выпечка с камбуза шефа Санджи.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#menu" class="btn-primary-glow">
+            <i data-lucide="compass" style="width: 20px; height: 20px;"></i>
+            <span>Исследовать Меню</span>
+          </a>
+          <a href="#customizer" class="btn-secondary-glass">
+            <i data-lucide="sparkles" style="width: 18px; height: 18px;"></i>
+            <span>Собрать Свой Бленд</span>
+          </a>
+        </div>
+
+        <!-- Specifications Row (Maximize Dribbble Style) -->
+        <div class="hero-specs-row">
+          <div class="hero-spec-item">
+            <span class="hero-spec-val" id="hero-spec-bounty">฿ 3,000,000,000</span>
+            <span class="hero-spec-lbl">Высшая награда</span>
+          </div>
+          <div class="hero-spec-item">
+            <span class="hero-spec-val" id="hero-spec-caffeine">320 мг</span>
+            <span class="hero-spec-lbl">Энергия Gear 5</span>
+          </div>
+          <div class="hero-spec-item">
+            <span class="hero-spec-val">100% Вано</span>
+            <span class="hero-spec-lbl">Спешелти Арабика</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right 3D Interactive Product Showcase Stage -->
+      <div class="hero-right">
+        <div class="product-stage-wrap" id="hero-product-card">
+          <div class="stage-watermark">WANTED</div>
+          
+          <div class="stage-badge-top">
+            <span class="stage-badge-wanted" id="hero-card-wanted-tag">DEAD OR ALIVE</span>
+            <span class="stage-bounty-val" id="hero-card-bounty">฿ 3,000,000,000</span>
+          </div>
+
+          <!-- Floating Specs Badges -->
+          <div class="floating-spec-pill pill-left" id="hero-pill-left">
+            <i data-lucide="flame" style="width: 14px; height: 14px; color: #f97316;"></i>
+            <span id="hero-card-roast">Dark Roast 85%</span>
+          </div>
+
+          <div class="floating-spec-pill pill-right" id="hero-pill-right">
+            <i data-lucide="zap" style="width: 14px; height: 14px; color: #a855f7;"></i>
+            <span id="hero-card-tag">Gear 5 Nitro</span>
+          </div>
+
+          <!-- Product Image Container -->
+          <div class="stage-image-container">
+            <img id="hero-product-img" src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=900&q=80" alt="Featured Drink">
+          </div>
+
+          <!-- Bottom Info Card -->
+          <div class="stage-info-bottom">
+            <div>
+              <span class="stage-item-tag" id="hero-card-character">Monkey D. Luffy Edition</span>
+              <h3 class="stage-item-name" id="hero-card-name">Gomu Gomu Nitro Cold Brew</h3>
+            </div>
+
+            <div class="stage-action-row">
+              <div class="stage-price-box">
+                <span class="stage-price-main" id="hero-card-price">390 ₽</span>
+                <span class="stage-price-sub">Доставка на палубу</span>
+              </div>
+              <button class="btn-stage-add" id="btn-hero-add-cart" title="Добавить в судовой трюм">
+                <i data-lucide="plus" style="width: 22px; height: 22px;"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 01 / 02 / 03 / 04 Quick Showcase Switcher -->
+        <div class="hero-stage-switcher" id="hero-switcher">
+          <button class="stage-switch-btn active" data-index="0">01 / LUFFY</button>
+          <button class="stage-switch-btn" data-index="1">02 / ZORO</button>
+          <button class="stage-switch-btn" data-index="2">03 / SANJI</button>
+          <button class="stage-switch-btn" data-index="3">04 / NAMI</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TICKER MARQUEE STRIP
+       ========================================================================== -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <div class="marquee-item"><i data-lucide="anchor"></i> BARATIE COFFEE ROASTERS</div>
+      <div class="marquee-item"><i data-lucide="star"></i> WANTED BOUNTY SPECIALS</div>
+      <div class="marquee-item"><i data-lucide="coffee"></i> ALL BLUE BEANS SELECTION</div>
+      <div class="marquee-item"><i data-lucide="utensils"></i> CHEF SANJI GALLEY PASTRIES</div>
+      <div class="marquee-item"><i data-lucide="sparkles"></i> DEVIL FRUIT SIGNATURE BREWS</div>
+      <div class="marquee-item"><i data-lucide="compass"></i> GRAND LINE NAVIGATION CAFE</div>
+      <!-- Duplicate for seamless infinite loop -->
+      <div class="marquee-item"><i data-lucide="anchor"></i> BARATIE COFFEE ROASTERS</div>
+      <div class="marquee-item"><i data-lucide="star"></i> WANTED BOUNTY SPECIALS</div>
+      <div class="marquee-item"><i data-lucide="coffee"></i> ALL BLUE BEANS SELECTION</div>
+      <div class="marquee-item"><i data-lucide="utensils"></i> CHEF SANJI GALLEY PASTRIES</div>
+      <div class="marquee-item"><i data-lucide="sparkles"></i> DEVIL FRUIT SIGNATURE BREWS</div>
+      <div class="marquee-item"><i data-lucide="compass"></i> GRAND LINE NAVIGATION CAFE</div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MENU SECTION (Wanted Poster Hybrid Cards)
+       ========================================================================== -->
+  <section class="section-wrapper" id="menu">
+    <div class="section-head">
+      <span class="section-supertitle">СУДОВОЙ ПРЕЙСКУРАНТ НАГРАД</span>
+      <h2 class="section-title">МЕНЮ КОФЕ & СПЕШЛОВ</h2>
+      <p class="section-subtitle">
+        Каждая чашка создана по рецептам шефа Санджи и вдохновлена величайшими пиратами Гранд Лайн. Выберите категорию или закажите легенду.
+      </p>
+    </div>
+
+    <!-- Category Filter Pills -->
+    <div class="menu-filter-bar" id="menu-filters">
+      <button class="btn-filter-pill active" data-category="all">
+        <i data-lucide="layers" style="width: 16px; height: 16px;"></i>
+        <span>Все позиции</span>
+      </button>
+      <button class="btn-filter-pill" data-category="devil-fruits">
+        <i data-lucide="sparkles" style="width: 16px; height: 16px;"></i>
+        <span>Дьявольские Плоды</span>
+      </button>
+      <button class="btn-filter-pill" data-category="coffee">
+        <i data-lucide="coffee" style="width: 16px; height: 16px;"></i>
+        <span>Пиратский Кофе</span>
+      </button>
+      <button class="btn-filter-pill" data-category="specials">
+        <i data-lucide="heart" style="width: 16px; height: 16px;"></i>
+        <span>Спешлы Команды</span>
+      </button>
+      <button class="btn-filter-pill" data-category="food">
+        <i data-lucide="utensils" style="width: 16px; height: 16px;"></i>
+        <span>Камбуз Санджи</span>
+      </button>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="menu-grid" id="menu-grid">
+      <!-- Injected dynamically via app.js -->
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       DEVIL FRUIT CUSTOMIZER (Interactive Brew Lab + Real-Time Wanted Poster)
+       ========================================================================== -->
+  <section class="section-wrapper" id="customizer">
+    <div class="section-head">
+      <span class="section-supertitle">ИНТЕРАКТИВНАЯ ЛАБОРАТОРИЯ ВЕГАПАНКА</span>
+      <h2 class="section-title">СОЗДАЙ СВОЙ WANTED-НАПИТОК</h2>
+      <p class="section-subtitle">
+        Скомпонуйте основу, сироп Дьявольского плода и пиратский топпинг. Морской Дозор мгновенно выпишет постер с персональной наградой в Белли!
+      </p>
+    </div>
+
+    <div class="customizer-box">
+      <!-- Options Selector Form -->
+      <div class="customizer-form">
+        <!-- Step 1: Base -->
+        <div>
+          <h4 class="custom-step-title"><i data-lucide="coffee"></i> 1. Выберите кофейную основу</h4>
+          <div class="custom-options-grid" id="custom-base-options"></div>
+        </div>
+
+        <!-- Step 2: Milk -->
+        <div>
+          <h4 class="custom-step-title"><i data-lucide="droplet"></i> 2. Молоко на выбор</h4>
+          <div class="custom-options-grid" id="custom-milk-options"></div>
+        </div>
+
+        <!-- Step 3: Devil Fruit Syrup -->
+        <div>
+          <h4 class="custom-step-title"><i data-lucide="sparkles"></i> 3. Сироп Дьявольского Плода</h4>
+          <div class="custom-options-grid" id="custom-syrup-options"></div>
+        </div>
+
+        <!-- Step 4: Topping -->
+        <div>
+          <h4 class="custom-step-title"><i data-lucide="award"></i> 4. Пиратский топпинг</h4>
+          <div class="custom-options-grid" id="custom-topping-options"></div>
+        </div>
+      </div>
+
+      <!-- Live Wanted Poster Stage -->
+      <div class="custom-poster-stage">
+        <div class="wanted-poster-frame" id="live-wanted-poster">
+          <div class="poster-header-wanted">WANTED</div>
+          
+          <div class="poster-photo-slot" id="poster-photo-slot">
+            <span class="poster-cup-icon" id="poster-fruit-icon">🍇</span>
+          </div>
+
+          <div class="poster-dead-alive">DEAD OR ALIVE</div>
+          <div class="poster-drink-name" id="poster-drink-title">GOMU CUSTOM BREW</div>
+          <div class="poster-bounty-val" id="poster-bounty-display">฿ 850,000,000</div>
+          <div class="poster-marine-seal">MARINE HEADQUARTERS REWARD • ALL BLUE</div>
+        </div>
+
+        <button class="btn-primary-glow" id="btn-add-custom-drink" style="width: 100%; max-width: 380px; margin-top: 24px; justify-content: center;">
+          <i data-lucide="plus-circle" style="width: 20px; height: 20px;"></i>
+          <span id="btn-custom-label">Добавить в трюм (360 ₽)</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ABOUT & SANJI'S PHILOSOPHY SECTION
+       ========================================================================== */
+  -->
+  <section class="section-wrapper" id="story">
+    <div class="story-grid">
+      <div class="story-card-glass">
+        <span class="section-supertitle">ФИЛОСОФИЯ БАРАТИ</span>
+        <h2 class="section-title" style="font-size: 2.3rem; margin-bottom: 20px;">НИКАКИХ КОМПРОМИССОВ ВО ВКУСЕ</h2>
+        
+        <p style="color: var(--text-muted); line-height: 1.8;">
+          «В открытом море нет места плохой еде или кислому кофе. Даже если за окном бушует свирепый шторм Калм Белт, чашка нашего кофе должна сиять ярче золота Скайпии.»
+        </p>
+
+        <div class="quote-highlight">
+          «Накормить и взбодрить каждого, кто голоден и ищет приключений — вот кодекс плавучего ресторана Барати!»
+          <div style="font-size: 0.85rem; color: #fff; margin-top: 6px; font-style: normal; font-weight: 700;">— Черноногий Санджи, Шеф-повар</div>
+        </div>
+
+        <div class="story-features">
+          <div class="feature-box">
+            <h4>Свежая обжарка</h4>
+            <p>Зерна с вулкана Вано обжариваются в день отплытия корабля.</p>
+          </div>
+          <div class="feature-box">
+            <h4>Вода Олл Блю</h4>
+            <p>Многоступенчатая минерализация океанической чистейшей воды.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Log Pose Map Visual -->
+      <div class="map-visual-wrap" id="location">
+        <img src="assets/compass.svg" alt="Log Pose Compass" class="log-pose-img">
+        <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: #fff; margin-bottom: 8px;">ЛОКАЦИЯ: ПЛАВУЧИЙ РЕСТОРАН</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 400px; margin: 0 auto;">
+          Наш корабль пришвартован в тихой гавани Гранд Лайн. Стрелка вашего Лог-Поса уже указывает на нас!
+        </p>
+        <div class="coordinates-badge">
+          3° 14' 15" N, 142° 08' 20" E • ALL BLUE DOCK
+        </div>
+
+        <div style="margin-top: 24px; display: flex; justify-content: center; gap: 20px; font-size: 0.82rem; color: var(--text-muted);">
+          <div><strong style="color: #fff;">Часы работы:</strong> С рассвета до полуночи</div>
+          <div><strong style="color: #fff;">Почтовая чайка:</strong> baratie@grandline.sea</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CART SLIDE-OVER DRAWER ("Судовой Трюм")
+       ========================================================================== -->
+  <div class="cart-drawer-overlay" id="cart-drawer">
+    <div class="cart-drawer-panel">
+      <div class="cart-drawer-header">
+        <div class="cart-drawer-title">
+          <i data-lucide="shopping-bag" style="color: var(--gold-bright);"></i>
+          <span>Судовой Трюм</span>
+        </div>
+        <button class="btn-close-drawer" id="btn-close-cart">
+          <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+        </button>
+      </div>
+
+      <!-- Items List -->
+      <div class="cart-items-list" id="cart-items-list">
+        <!-- Rendered dynamically via app.js -->
+      </div>
+
+      <!-- Promo Code Box -->
+      <div class="cart-promo-box">
+        <input type="text" class="cart-promo-input" id="cart-promo-input" placeholder="Промокод (напр. ONEPIECE, SANJI)">
+        <button class="btn-promo-apply" id="btn-apply-promo">Ввести</button>
+      </div>
+
+      <!-- Footer Summary -->
+      <div class="cart-drawer-footer">
+        <div class="cart-summary-line">
+          <span>Сумма заказа (Белли):</span>
+          <span class="cart-total-bounty" id="cart-subtotal-beli">฿ 0</span>
+        </div>
+        <div class="cart-summary-line" id="discount-row" style="display: none; color: #10b981;">
+          <span>Скидка пирата:</span>
+          <span id="discount-amount">-0 ₽</span>
+        </div>
+        <div class="cart-summary-line total">
+          <span>Итого к оплате:</span>
+          <span style="color: #fff; font-size: 1.4rem;" id="cart-total-rub">0 ₽</span>
+        </div>
+
+        <button class="btn-checkout" id="btn-checkout-order">
+          Оформить приказ в трюм
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: QUICK VIEW
+       ========================================================================== -->
+  <div class="modal-overlay" id="quick-view-modal">
+    <div class="modal-content-card" id="quick-view-card">
+      <button class="btn-modal-close" id="btn-close-quick-view">
+        <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+      </button>
+      <div id="quick-view-body">
+        <!-- Dynamic Quick View content -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: ORDER CONFIRMED
+       ========================================================================== -->
+  <div class="modal-overlay" id="order-success-modal">
+    <div class="modal-content-card" style="text-align: center; max-width: 480px;">
+      <div style="width: 70px; height: 70px; background: rgba(16, 185, 129, 0.15); border: 2px solid #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: #10b981;">
+        <i data-lucide="check" style="width: 36px; height: 36px;"></i>
+      </div>
+      <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: #fff; margin-bottom: 12px;">ЗАКАЗ ПРИНЯТ НА КАМБУЗ!</h3>
+      <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 24px;">
+        Шеф Санджи уже разжигает огонь на плите Барати. Почтовые чайки доставят свежезаваренный кофе прямо к вашему столу!
+      </p>
+      <div style="background: rgba(255, 255, 255, 0.04); border: 1px dashed rgba(212, 175, 55, 0.3); border-radius: 12px; padding: 16px; margin-bottom: 24px; font-family: monospace; font-size: 0.9rem; color: var(--gold-bright);">
+        ПИРАТСКИЙ БИЛЕТ #<span id="success-order-id">BAR-7749</span>
+      </div>
+      <button class="btn-primary-glow" id="btn-close-success" style="width: 100%; justify-content: center;">
+        Продолжить плавание
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="brand-group">
+        <div class="brand-logo-wrap">
+          <img src="assets/logo.svg" alt="Baratie Coffee Logo">
+        </div>
+        <div class="brand-title-wrap">
+          <span class="brand-name">BARATIE COFFEE</span>
+          <span class="brand-sub">Grand Line Specialty Roasters</span>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 24px; color: var(--text-muted); font-size: 0.88rem;">
+        <a href="#menu" style="color: inherit; text-decoration: none;">Меню</a>
+        <a href="#customizer" style="color: inherit; text-decoration: none;">Кастомизатор</a>
+        <a href="#story" style="color: inherit; text-decoration: none;">История</a>
+        <a href="#location" style="color: inherit; text-decoration: none;">Координаты</a>
+      </div>
+    </div>
+
+    <div class="footer-copy">
+      <span>© 2026 Baratie Coffee Co. Вдохновлено легендарной мангой Эйитиро Оды «One Piece».</span>
+      <span>Сделано с душой шефа Санджи ☕</span>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="menu-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

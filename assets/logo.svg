@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Outer Glow Circle -->
+  <circle cx="100" cy="100" r="92" stroke="#d4af37" stroke-width="2" stroke-dasharray="4 6" opacity="0.6"/>
+  <circle cx="100" cy="100" r="84" stroke="#d4af37" stroke-width="1.5" opacity="0.9"/>
+  
+  <!-- Crossed Pirate Coffee Spoons / Bones -->
+  <g stroke="#e2d4b7" stroke-width="5" stroke-linecap="round">
+    <line x1="45" y1="45" x2="155" y2="155"/>
+    <line x1="155" y1="45" x2="45" y2="155"/>
+  </g>
+  <!-- Spoon Bowls / Bone Knobs -->
+  <circle cx="43" cy="43" r="8" fill="#e2d4b7"/>
+  <circle cx="157" cy="43" r="8" fill="#e2d4b7"/>
+  <circle cx="43" cy="157" r="8" fill="#e2d4b7"/>
+  <circle cx="157" cy="157" r="8" fill="#e2d4b7"/>
+
+  <!-- Coffee Cup Base / Skull Shape -->
+  <path d="M60 85 C60 135 140 135 140 85 Z" fill="#18120c" stroke="#d4af37" stroke-width="4"/>
+  <!-- Cup Handle -->
+  <path d="M140 92 C158 92 158 120 140 120" stroke="#d4af37" stroke-width="4" stroke-linecap="round" fill="none"/>
+  
+  <!-- Skull Face in the Cup -->
+  <!-- Eyes -->
+  <circle cx="85" cy="102" r="7" fill="#f4ecd8"/>
+  <circle cx="115" cy="102" r="7" fill="#f4ecd8"/>
+  <circle cx="85" cy="103" r="3.5" fill="#18120c"/>
+  <circle cx="115" cy="103" r="3.5" fill="#18120c"/>
+  <!-- Nose (Coffee Bean notch) -->
+  <path d="M98 112 Q100 109 102 112 Z" fill="#f4ecd8"/>
+  <!-- Smile with Sanji curl / pirate grin -->
+  <path d="M82 122 Q100 130 118 122" stroke="#f4ecd8" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <line x1="90" y1="122" x2="90" y2="127" stroke="#f4ecd8" stroke-width="2"/>
+  <line x1="100" y1="123" x2="100" y2="128" stroke="#f4ecd8" stroke-width="2"/>
+  <line x1="110" y1="122" x2="110" y2="127" stroke="#f4ecd8" stroke-width="2"/>
+
+  <!-- Straw Hat on top of cup -->
+  <!-- Hat Brim -->
+  <ellipse cx="100" cy="80" rx="46" ry="9" fill="#f59e0b" stroke="#b45309" stroke-width="2"/>
+  <!-- Hat Crown -->
+  <path d="M76 80 C76 56 124 56 124 80 Z" fill="#f59e0b" stroke="#b45309" stroke-width="2"/>
+  <!-- Red Ribbon -->
+  <path d="M77 75 C85 71 115 71 123 75 L124 80 C115 76 85 76 76 80 Z" fill="#ef4444"/>
+
+  <!-- Coffee Steam -->
+  <path d="M90 48 Q85 36 93 25" stroke="#d4af37" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.8"/>
+  <path d="M102 44 Q108 32 100 20" stroke="#d4af37" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.8"/>
+  <path d="M112 48 Q118 38 114 26" stroke="#d4af37" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.8"/>
+
+  <!-- Chef Hat miniature / Sanji eyebrow curl element -->
+  <path d="M114 96 Q118 92 122 96 Q122 100 118 100" stroke="#d4af37" stroke-width="2" fill="none"/>
+</svg>
