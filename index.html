@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Baratie Coffee — Grand Line Brews | Кофейня в стиле One Piece</title>
-  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
   
   <!-- Google Fonts: Cinzel Decorative, Cinzel & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
 </head>
 <body>
 
-  <!-- Ambient Glow Sphere for Dynamic Lighting (Korsa Maximize Style) -->
+  <!-- Ambient Glow Sphere for Dynamic Lighting -->
   <div class="ambient-glow-sphere" id="hero-ambient-glow"></div>
 
   <!-- ==========================================================================
@@ -28,7 +28,7 @@
     <div class="nav-container">
       <a href="#hero" class="brand-group">
         <div class="brand-logo-wrap">
-          <img src="assets/logo.svg" alt="Baratie Coffee Logo">
+          <img src="assets/logo.jpg" alt="Baratie Coffee Logo">
         </div>
         <div class="brand-title-wrap">
           <span class="brand-name">BARATIE</span>
@@ -40,6 +40,7 @@
         <ul class="nav-links">
           <li><a href="#hero" class="nav-link active">Главная</a></li>
           <li><a href="#menu" class="nav-link">Меню Wanted</a></li>
+          <li><a href="#promo" class="nav-link">Розыск Недели</a></li>
           <li><a href="#customizer" class="nav-link">Лаборатория Напитка</a></li>
           <li><a href="#story" class="nav-link">Камбуз Санджи</a></li>
           <li><a href="#location" class="nav-link">Лог-Пос & Карта</a></li>
@@ -73,7 +74,7 @@
   </header>
 
   <!-- ==========================================================================
-       HERO SECTION (High-End 3D Stage & Expressive Typography)
+       HERO SECTION (assets/hero-bg.jpg + 3D Product Stage)
        ========================================================================== -->
   <section class="hero-section" id="hero">
     <div class="hero-grid">
@@ -91,7 +92,7 @@
         </h1>
 
         <p class="hero-description">
-          Первая плавучая спешелти-кофейня на стыке всех четырёх морей. Напитки с силой Дьявольских плодов, бодрящие бленды Мугивар и легендарная выпечка с камбуза шефа Санджи.
+          Первая плавучая спешелти-кофейня на стыке четырёх океанов. Напитки с силой Дьявольских плодов, бодрящие бленды Мугивар и легендарная выпечка с камбуза шефа Санджи.
         </p>
 
         <div class="hero-cta-group">
@@ -105,15 +106,15 @@
           </a>
         </div>
 
-        <!-- Specifications Row (Maximize Dribbble Style) -->
+        <!-- Specifications Row -->
         <div class="hero-specs-row">
           <div class="hero-spec-item">
-            <span class="hero-spec-val" id="hero-spec-bounty">฿ 3,000,000,000</span>
+            <span class="hero-spec-val" id="hero-spec-bounty">฿ 1,032,000,000</span>
             <span class="hero-spec-lbl">Высшая награда</span>
           </div>
           <div class="hero-spec-item">
-            <span class="hero-spec-val" id="hero-spec-caffeine">320 мг</span>
-            <span class="hero-spec-lbl">Энергия Gear 5</span>
+            <span class="hero-spec-val" id="hero-spec-caffeine">240 мг</span>
+            <span class="hero-spec-lbl">Бодрость океана</span>
           </div>
           <div class="hero-spec-item">
             <span class="hero-spec-val">100% Вано</span>
@@ -129,36 +130,36 @@
           
           <div class="stage-badge-top">
             <span class="stage-badge-wanted" id="hero-card-wanted-tag">DEAD OR ALIVE</span>
-            <span class="stage-bounty-val" id="hero-card-bounty">฿ 3,000,000,000</span>
+            <span class="stage-bounty-val" id="hero-card-bounty">฿ 1,032,000,000</span>
           </div>
 
           <!-- Floating Specs Badges -->
           <div class="floating-spec-pill pill-left" id="hero-pill-left">
             <i data-lucide="flame" style="width: 14px; height: 14px; color: #f97316;"></i>
-            <span id="hero-card-roast">Dark Roast 85%</span>
+            <span id="hero-card-roast">Dark Roast 88%</span>
           </div>
 
           <div class="floating-spec-pill pill-right" id="hero-pill-right">
-            <i data-lucide="zap" style="width: 14px; height: 14px; color: #a855f7;"></i>
-            <span id="hero-card-tag">Gear 5 Nitro</span>
+            <i data-lucide="zap" style="width: 14px; height: 14px; color: #dca338;"></i>
+            <span id="hero-card-tag">All Blue Reserve</span>
           </div>
 
           <!-- Product Image Container -->
           <div class="stage-image-container">
-            <img id="hero-product-img" src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=900&q=80" alt="Featured Drink">
+            <img id="hero-product-img" src="assets/all-blue-coffee.jpg" alt="Featured Drink">
           </div>
 
           <!-- Bottom Info Card -->
           <div class="stage-info-bottom">
             <div>
-              <span class="stage-item-tag" id="hero-card-character">Monkey D. Luffy Edition</span>
-              <h3 class="stage-item-name" id="hero-card-name">Gomu Gomu Nitro Cold Brew</h3>
+              <span class="stage-item-tag" id="hero-card-character">Vinsmoke Sanji Edition</span>
+              <h3 class="stage-item-name" id="hero-card-name">Кофе «All Blue»</h3>
             </div>
 
             <div class="stage-action-row">
               <div class="stage-price-box">
                 <span class="stage-price-main" id="hero-card-price">390 ₽</span>
-                <span class="stage-price-sub">Доставка на палубу</span>
+                <span class="stage-price-sub">Подача на борт</span>
               </div>
               <button class="btn-stage-add" id="btn-hero-add-cart" title="Добавить в судовой трюм">
                 <i data-lucide="plus" style="width: 22px; height: 22px;"></i>
@@ -169,10 +170,10 @@
 
         <!-- 01 / 02 / 03 / 04 Quick Showcase Switcher -->
         <div class="hero-stage-switcher" id="hero-switcher">
-          <button class="stage-switch-btn active" data-index="0">01 / LUFFY</button>
-          <button class="stage-switch-btn" data-index="1">02 / ZORO</button>
-          <button class="stage-switch-btn" data-index="2">03 / SANJI</button>
-          <button class="stage-switch-btn" data-index="3">04 / NAMI</button>
+          <button class="stage-switch-btn active" data-index="0">01 / ALL BLUE</button>
+          <button class="stage-switch-btn" data-index="1">02 / BLACK LEG</button>
+          <button class="stage-switch-btn" data-index="2">03 / GRAND LINE</button>
+          <button class="stage-switch-btn" data-index="3">04 / DEVIL FRUIT</button>
         </div>
       </div>
     </div>
@@ -184,23 +185,23 @@
   <div class="marquee-strip">
     <div class="marquee-track">
       <div class="marquee-item"><i data-lucide="anchor"></i> BARATIE COFFEE ROASTERS</div>
-      <div class="marquee-item"><i data-lucide="star"></i> WANTED BOUNTY SPECIALS</div>
-      <div class="marquee-item"><i data-lucide="coffee"></i> ALL BLUE BEANS SELECTION</div>
+      <div class="marquee-item"><i data-lucide="star"></i> ALL BLUE RESERVE COFFEE</div>
+      <div class="marquee-item"><i data-lucide="coffee"></i> BLACK LEG ESPRESSO SHOTS</div>
       <div class="marquee-item"><i data-lucide="utensils"></i> CHEF SANJI GALLEY PASTRIES</div>
-      <div class="marquee-item"><i data-lucide="sparkles"></i> DEVIL FRUIT SIGNATURE BREWS</div>
+      <div class="marquee-item"><i data-lucide="sparkles"></i> DEVIL FRUIT DESSERT SPECIALS</div>
       <div class="marquee-item"><i data-lucide="compass"></i> GRAND LINE NAVIGATION CAFE</div>
       <!-- Duplicate for seamless infinite loop -->
       <div class="marquee-item"><i data-lucide="anchor"></i> BARATIE COFFEE ROASTERS</div>
-      <div class="marquee-item"><i data-lucide="star"></i> WANTED BOUNTY SPECIALS</div>
-      <div class="marquee-item"><i data-lucide="coffee"></i> ALL BLUE BEANS SELECTION</div>
+      <div class="marquee-item"><i data-lucide="star"></i> ALL BLUE RESERVE COFFEE</div>
+      <div class="marquee-item"><i data-lucide="coffee"></i> BLACK LEG ESPRESSO SHOTS</div>
       <div class="marquee-item"><i data-lucide="utensils"></i> CHEF SANJI GALLEY PASTRIES</div>
-      <div class="marquee-item"><i data-lucide="sparkles"></i> DEVIL FRUIT SIGNATURE BREWS</div>
+      <div class="marquee-item"><i data-lucide="sparkles"></i> DEVIL FRUIT DESSERT SPECIALS</div>
       <div class="marquee-item"><i data-lucide="compass"></i> GRAND LINE NAVIGATION CAFE</div>
     </div>
   </div>
 
   <!-- ==========================================================================
-       MENU SECTION (Wanted Poster Hybrid Cards)
+       MENU SECTION
        ========================================================================== -->
   <section class="section-wrapper" id="menu">
     <div class="section-head">
@@ -217,21 +218,21 @@
         <i data-lucide="layers" style="width: 16px; height: 16px;"></i>
         <span>Все позиции</span>
       </button>
-      <button class="btn-filter-pill" data-category="devil-fruits">
-        <i data-lucide="sparkles" style="width: 16px; height: 16px;"></i>
-        <span>Дьявольские Плоды</span>
-      </button>
       <button class="btn-filter-pill" data-category="coffee">
         <i data-lucide="coffee" style="width: 16px; height: 16px;"></i>
         <span>Пиратский Кофе</span>
       </button>
-      <button class="btn-filter-pill" data-category="specials">
-        <i data-lucide="heart" style="width: 16px; height: 16px;"></i>
-        <span>Спешлы Команды</span>
+      <button class="btn-filter-pill" data-category="devil-fruits">
+        <i data-lucide="sparkles" style="width: 16px; height: 16px;"></i>
+        <span>Дьявольские Плоды</span>
       </button>
       <button class="btn-filter-pill" data-category="food">
         <i data-lucide="utensils" style="width: 16px; height: 16px;"></i>
         <span>Камбуз Санджи</span>
+      </button>
+      <button class="btn-filter-pill" data-category="specials">
+        <i data-lucide="heart" style="width: 16px; height: 16px;"></i>
+        <span>Спешлы Команды</span>
       </button>
     </div>
 
@@ -242,7 +243,35 @@
   </section>
 
   <!-- ==========================================================================
-       DEVIL FRUIT CUSTOMIZER (Interactive Brew Lab + Real-Time Wanted Poster)
+       PROMO WANTED BANNER SECTION (assets/wanted-banner.jpg)
+       ========================================================================== -->
+  <section class="promo-banner-section" id="promo">
+    <div class="promo-banner-card">
+      <img src="assets/wanted-banner.jpg" alt="Wanted Promo Banner" class="promo-banner-bg">
+      <div class="promo-banner-overlay">
+        <div class="promo-banner-content">
+          <span class="promo-banner-super">ЭКСКЛЮЗИВНЫЙ РОЗЫСК ДОЗОРА</span>
+          <h2 class="promo-banner-title">ОСОБАЯ НАГРАДА ДЛЯ КАПИТАНОВ</h2>
+          <p class="promo-banner-desc">
+            Используйте секретный пароль команды Мугивар в судовом трюме: введите промокод <strong>ONEPIECE</strong> для скидки 15% или <strong>SANJI</strong> для скидки 20% от плавучего ресторана Барати!
+          </p>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="#menu" class="btn-primary-glow">
+              <i data-lucide="award" style="width: 18px; height: 18px;"></i>
+              <span>Забрать Награду</span>
+            </a>
+            <button class="btn-secondary-glass" onclick="document.getElementById('btn-open-cart').click()">
+              <i data-lucide="shopping-bag" style="width: 18px; height: 18px;"></i>
+              <span>Открыть Трюм</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       DEVIL FRUIT CUSTOMIZER
        ========================================================================== -->
   <section class="section-wrapper" id="customizer">
     <div class="section-head">
@@ -287,18 +316,18 @@
           <div class="poster-header-wanted">WANTED</div>
           
           <div class="poster-photo-slot" id="poster-photo-slot">
-            <span class="poster-cup-icon" id="poster-fruit-icon">🍇</span>
+            <span class="poster-cup-icon" id="poster-fruit-icon">🔥</span>
           </div>
 
           <div class="poster-dead-alive">DEAD OR ALIVE</div>
-          <div class="poster-drink-name" id="poster-drink-title">GOMU CUSTOM BREW</div>
-          <div class="poster-bounty-val" id="poster-bounty-display">฿ 850,000,000</div>
+          <div class="poster-drink-name" id="poster-drink-title">MERA ALL BLUE SPECIAL</div>
+          <div class="poster-bounty-val" id="poster-bounty-display">฿ 1,532,000,000</div>
           <div class="poster-marine-seal">MARINE HEADQUARTERS REWARD • ALL BLUE</div>
         </div>
 
         <button class="btn-primary-glow" id="btn-add-custom-drink" style="width: 100%; max-width: 380px; margin-top: 24px; justify-content: center;">
           <i data-lucide="plus-circle" style="width: 20px; height: 20px;"></i>
-          <span id="btn-custom-label">Добавить в трюм (360 ₽)</span>
+          <span id="btn-custom-label">Добавить в трюм (370 ₽)</span>
         </button>
       </div>
     </div>
@@ -306,8 +335,7 @@
 
   <!-- ==========================================================================
        ABOUT & SANJI'S PHILOSOPHY SECTION
-       ========================================================================== */
-  -->
+       ========================================================================== -->
   <section class="section-wrapper" id="story">
     <div class="story-grid">
       <div class="story-card-glass">
@@ -335,9 +363,11 @@
         </div>
       </div>
 
-      <!-- Log Pose Map Visual -->
+      <!-- Log Pose Map Visual with assets/compass.jpg -->
       <div class="map-visual-wrap" id="location">
-        <img src="assets/compass.svg" alt="Log Pose Compass" class="log-pose-img">
+        <div class="log-pose-img-wrap">
+          <img src="assets/compass.jpg" alt="Log Pose Compass">
+        </div>
         <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: #fff; margin-bottom: 8px;">ЛОКАЦИЯ: ПЛАВУЧИЙ РЕСТОРАН</h3>
         <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 400px; margin: 0 auto;">
           Наш корабль пришвартован в тихой гавани Гранд Лайн. Стрелка вашего Лог-Поса уже указывает на нас!
@@ -428,7 +458,7 @@
       <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 24px;">
         Шеф Санджи уже разжигает огонь на плите Барати. Почтовые чайки доставят свежезаваренный кофе прямо к вашему столу!
       </p>
-      <div style="background: rgba(255, 255, 255, 0.04); border: 1px dashed rgba(212, 175, 55, 0.3); border-radius: 12px; padding: 16px; margin-bottom: 24px; font-family: monospace; font-size: 0.9rem; color: var(--gold-bright);">
+      <div style="background: rgba(255, 255, 255, 0.04); border: 1px dashed rgba(220, 163, 56, 0.3); border-radius: 12px; padding: 16px; margin-bottom: 24px; font-family: monospace; font-size: 0.9rem; color: var(--gold-bright);">
         ПИРАТСКИЙ БИЛЕТ #<span id="success-order-id">BAR-7749</span>
       </div>
       <button class="btn-primary-glow" id="btn-close-success" style="width: 100%; justify-content: center;">
@@ -444,7 +474,7 @@
     <div class="footer-inner">
       <div class="brand-group">
         <div class="brand-logo-wrap">
-          <img src="assets/logo.svg" alt="Baratie Coffee Logo">
+          <img src="assets/logo.jpg" alt="Baratie Coffee Logo">
         </div>
         <div class="brand-title-wrap">
           <span class="brand-name">BARATIE COFFEE</span>
@@ -454,6 +484,7 @@
 
       <div style="display: flex; gap: 24px; color: var(--text-muted); font-size: 0.88rem;">
         <a href="#menu" style="color: inherit; text-decoration: none;">Меню</a>
+        <a href="#promo" style="color: inherit; text-decoration: none;">Розыск Недели</a>
         <a href="#customizer" style="color: inherit; text-decoration: none;">Кастомизатор</a>
         <a href="#story" style="color: inherit; text-decoration: none;">История</a>
         <a href="#location" style="color: inherit; text-decoration: none;">Координаты</a>

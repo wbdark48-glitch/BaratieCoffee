@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Ambient Ocean Waves Synthesizer (White/Pink noise + LFO Filter)
+  // Ambient Ocean Waves Synthesizer
   function toggleAmbientSound() {
     initAudioContext();
     const btnAudio = document.getElementById("btn-audio");
@@ -56,14 +56,13 @@ document.addEventListener("DOMContentLoaded", () => {
       btnAudio.classList.remove("playing");
       btnText.textContent = "Шум Моря";
     } else {
-      // Create noise buffer
       const bufferSize = audioCtx.sampleRate * 4;
       const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
       const data = buffer.getChannelData(0);
       let lastOut = 0.0;
       for (let i = 0; i < bufferSize; i++) {
         const white = Math.random() * 2 - 1;
-        data[i] = (lastOut + (0.02 * white)) / 1.02; // Pinkish filter
+        data[i] = (lastOut + (0.02 * white)) / 1.02;
         lastOut = data[i];
       }
 
@@ -71,13 +70,12 @@ document.addEventListener("DOMContentLoaded", () => {
       oceanNode.buffer = buffer;
       oceanNode.loop = true;
 
-      // Filter modulated with LFO (wave surging effect)
       const filter = audioCtx.createBiquadFilter();
       filter.type = "lowpass";
       filter.frequency.value = 350;
 
       const lfo = audioCtx.createOscillator();
-      lfo.frequency.value = 0.15; // 6-7 second wave cycle
+      lfo.frequency.value = 0.15;
       const lfoGain = audioCtx.createGain();
       lfoGain.gain.value = 250;
       lfo.connect(filter.frequency);
@@ -85,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       gainNode = audioCtx.createGain();
       gainNode.gain.setValueAtTime(0.001, audioCtx.currentTime);
-      gainNode.gain.linearRampToValueAtTime(0.12, audioCtx.currentTime + 2); // pleasant soft background
+      gainNode.gain.linearRampToValueAtTime(0.12, audioCtx.currentTime + 2);
 
       oceanNode.connect(filter);
       filter.connect(gainNode);
@@ -106,8 +104,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const gain = audioCtx.createGain();
       
       osc.type = "sine";
-      osc.frequency.setValueAtTime(987.77, audioCtx.currentTime); // B5 note
-      osc.frequency.exponentialRampToValueAtTime(1318.51, audioCtx.currentTime + 0.08); // E6
+      osc.frequency.setValueAtTime(987.77, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(1318.51, audioCtx.currentTime + 0.08);
 
       gain.gain.setValueAtTime(0.18, audioCtx.currentTime);
       gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.35);
@@ -138,11 +136,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // --- HERO 3D TILT & PRODUCT SWITCHER ---
+  // Using user's real images for the showcase
   const heroFeaturedItems = [
-    MENU_DATA.find(i => i.id === "gomu-gomu-nitro"),
-    MENU_DATA.find(i => i.id === "santoryu-espresso"),
-    MENU_DATA.find(i => i.id === "diable-jambe-mocha"),
-    MENU_DATA.find(i => i.id === "mikan-citrus-latte")
+    MENU_DATA.find(i => i.id === "all-blue-coffee"),
+    MENU_DATA.find(i => i.id === "black-leg-espresso"),
+    MENU_DATA.find(i => i.id === "grand-line-cappuccino"),
+    MENU_DATA.find(i => i.id === "devil-fruit-dessert")
   ];
 
   const heroCard = document.getElementById("hero-product-card");
@@ -187,7 +186,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Re-initialize icons in pills
     if (window.lucide) window.lucide.createIcons();
   }
 
@@ -207,8 +205,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const y = e.clientY - rect.top;
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
-      const rotateX = ((y - centerY) / centerY) * -12;
-      const rotateY = ((x - centerX) / centerX) * 12;
+      const rotateX = ((y - centerY) / centerY) * -10;
+      const rotateY = ((x - centerX) / centerX) * 10;
 
       heroCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
     });
@@ -316,7 +314,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- DEVIL FRUIT CUSTOMIZER LOGIC ---
   function renderCustomizerOptions() {
-    // 1. Bases
     const baseGrid = document.getElementById("custom-base-options");
     baseGrid.innerHTML = CUSTOMIZER_OPTIONS.bases.map(b => `
       <div class="custom-pill-btn ${b.id === customSelection.base.id ? 'active' : ''}" data-base="${b.id}">
@@ -325,7 +322,6 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `).join("");
 
-    // 2. Milks
     const milkGrid = document.getElementById("custom-milk-options");
     milkGrid.innerHTML = CUSTOMIZER_OPTIONS.milks.map(m => `
       <div class="custom-pill-btn ${m.id === customSelection.milk.id ? 'active' : ''}" data-milk="${m.id}">
@@ -334,7 +330,6 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `).join("");
 
-    // 3. Syrups
     const syrupGrid = document.getElementById("custom-syrup-options");
     syrupGrid.innerHTML = CUSTOMIZER_OPTIONS.devilSyrups.map(s => `
       <div class="custom-pill-btn ${s.id === customSelection.syrup.id ? 'active' : ''}" data-syrup="${s.id}">
@@ -343,7 +338,6 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `).join("");
 
-    // 4. Toppings
     const toppingGrid = document.getElementById("custom-topping-options");
     toppingGrid.innerHTML = CUSTOMIZER_OPTIONS.toppings.map(t => `
       <div class="custom-pill-btn ${t.id === customSelection.topping.id ? 'active' : ''}" data-topping="${t.id}">
@@ -403,7 +397,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const iconEl = document.getElementById("poster-fruit-icon");
     iconEl.textContent = customSelection.syrup.icon;
 
-    // Glowing aura behind poster photo slot
     const photoSlot = document.getElementById("poster-photo-slot");
     photoSlot.style.boxShadow = `inset 0 0 40px ${customSelection.syrup.color}`;
   }
@@ -423,7 +416,7 @@ document.addEventListener("DOMContentLoaded", () => {
         priceRub: totalRub,
         bounty: `฿ ${totalBounty.toLocaleString()}`,
         bountyRaw: totalBounty,
-        image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80",
+        image: "assets/all-blue-coffee.jpg",
         specs: {
           roast: customSelection.base.name,
           caffeine: customSelection.base.caffeine,
@@ -471,7 +464,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateCartUI() {
-    // Total count badge
     const totalCount = cart.reduce((acc, item) => acc + item.quantity, 0);
     cartCounter.textContent = totalCount;
     cartCounter.style.transform = "scale(1.3)";
@@ -494,7 +486,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Render items
     cartItemsList.innerHTML = cart.map(item => `
       <div class="cart-item-row">
         <img src="${item.image}" alt="${item.name}" class="cart-item-thumb">
@@ -510,7 +501,6 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `).join("");
 
-    // Calculate totals
     const rawBeli = cart.reduce((acc, i) => acc + (i.bountyRaw || 500000000) * i.quantity, 0);
     const subtotalRub = cart.reduce((acc, i) => acc + i.priceRub * i.quantity, 0);
     const discountRub = Math.round(subtotalRub * appliedDiscount);
@@ -525,7 +515,6 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("discount-amount").textContent = `-${discountRub} ₽ (${Math.round(appliedDiscount * 100)}%)`;
     }
 
-    // Stepper listeners
     cartItemsList.querySelectorAll(".btn-step-plus").forEach(b => {
       b.addEventListener("click", () => {
         const id = b.getAttribute("data-id");
@@ -615,13 +604,13 @@ document.addEventListener("DOMContentLoaded", () => {
   function openQuickView(item) {
     quickViewBody.innerHTML = `
       <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 24px; align-items: center;">
-        <img src="${item.image}" alt="${item.name}" style="width: 100%; border-radius: 12px; object-fit: cover; aspect-ratio: 1; border: 2px solid rgba(212, 175, 55, 0.4);">
+        <img src="${item.image}" alt="${item.name}" style="width: 100%; height: 260px; border-radius: 12px; object-fit: cover; object-position: center; border: 2px solid rgba(220, 163, 56, 0.45);">
         <div>
           <span style="font-size: 0.72rem; letter-spacing: 0.2em; color: ${item.accentColor}; font-weight: 700; text-transform: uppercase;">${item.character}</span>
           <h3 style="font-family: var(--font-display); font-size: 1.4rem; color: #fff; margin: 6px 0 10px;">${item.name}</h3>
           <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">${item.description}</p>
           
-          <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 12px; margin-bottom: 20px;">
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(220, 163, 56, 0.2); border-radius: 8px; padding: 12px; margin-bottom: 20px;">
             <div style="font-size: 0.8rem; color: #fff; margin-bottom: 4px;"><strong>Обжарка:</strong> ${item.specs.roast}</div>
             <div style="font-size: 0.8rem; color: #fff; margin-bottom: 4px;"><strong>Кофеин:</strong> ${item.specs.caffeine}</div>
             <div style="font-size: 0.8rem; color: #fff;"><strong>Происхождение:</strong> ${item.specs.origin}</div>
@@ -674,10 +663,10 @@ document.addEventListener("DOMContentLoaded", () => {
         navLinks.style.top = "70px";
         navLinks.style.left = "20px";
         navLinks.style.right = "20px";
-        navLinks.style.background = "#140d09";
+        navLinks.style.background = "#18100a";
         navLinks.style.padding = "20px";
         navLinks.style.borderRadius = "16px";
-        navLinks.style.border = "1px solid rgba(212, 175, 55, 0.3)";
+        navLinks.style.border = "1px solid rgba(220, 163, 56, 0.35)";
       }
     });
   }
